@@ -27,5 +27,12 @@ TEST_CASE("Digits are transliterated", "[alphanumeric]"){
     REQUIRE( transformChar('9')== "NINE");
 }
 
-/*TEST_CASE("Special characters are removed", "[punctuation]"){
-    REQUIRE(false);}*/
+TEST_CASE("Special characters are removed", "[punctuation]"){
+    const std::string specialChar{"[]{}#~@'<,>.?/|!£$%^&*()_+-=:;"};
+
+    for (size_t i =0; i < specialChar.size(); i++){
+        REQUIRE( transformChar(specialChar[i]) == "");
+    }
+    
+}
+ 
