@@ -20,3 +20,8 @@ add_test(NAME test-catch COMMAND testCatch)
 add_executable(testTransformChar testTransformChar.cpp)
 target_link_libraries(testTransformChar MPAGSCipher Catch)
 add_test(NAME test-transformchar COMMAND testTransformChar)
+
+#Test ProcessCommandLine
+add_executable(testProcessCommandLine testProcessCommandLine.cpp)
+target_link_libraries(testProcessCommandLine MPAGSCipher Catch)
+add_test(NAME test-processcommandline COMMAND testProcessCommandLine)
